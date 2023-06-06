@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.css"/>
+  <link rel="stylesheet" href="App.css">
+  <title>Brierks IA</title>
+  <style>
+    .formulario {
+        display: none;
+    }
+  </style>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
+  <script>
+    $(document).ready(function() {
+      $('.slayer-carousel').slick({
+        lazyLoad: 'ondemand',
+        slidesToShow: 3,
+        slidesToScroll: 1
+      });
+    });
+
+    function mostrarFormulario() {
+        var formulario = document.getElementById("formulario");
+        formulario.style.display = "block";
+    }
+
+    function moverSlayer() {
+        var slayerSection = document.getElementById("Slayer");
+        slayerSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  </script>
+</head>
+<body style="background-image: url('fondo_ia.jpg');">
+  <header>
+    <h1 class="logo">
+      <img src="logo_brierks.png" alt="Logo de Brierks IA">
+      Brierks IA
+    </h1>
+    <nav class="navbar">
+      <ul>
+        <li><a href="#Inicio" onclick="moverInicio()">Inicio</a></li>
+        <li><a href="#Slayer" onclick="moverSlayer()">Slayer</a></li>
+        <li><a href="#Servicios" onclick="moverServicios()">Servicios</a></li>
+        <li><a href="#Juegos_destacados" onclick="moverJuegosDestacados()">Juegos destacados</a></li>
+        <li><a href="#Testimonios" onclick="moverTestimonios()">Testimonios</a></li>
+        <li><a href="#Contacto" onclick="moverContacto()">Contacto</a></li>
+
+      </ul>
+    </nav>
+    <div id="user-actions">
+        <button onclick="mostrarFormulario()">Iniciar sesión</button>
+        <button onclick="mostrarFormulario()">Registrarse</button>
+    </div>
+  </header>
+
+  <section id="Slayer" onclick="moverSlayer()">
+    <h2>Redefiniendo los límites del juego con inteligencia artificial</h2>
+    <div class="slayer-carousel">
+      <img src="ia.png" alt="Imagen 1">
+      <img src="sport.jpg" alt="Imagen 2">
+      <img src="mano.jpg" alt="Imagen 3">
+      <img src="evolucion.jpg" alt="Imagen 4">
+      <img src="visor.jpeg" alt="Imagen 5">
+      <img src="videojuegos.jpg" alt="Imagen 6">
+
+    </div>
+  </section>
+
+  <section id="Servicios">
+    <h2>Nuestros servicios</h2>
+    <ul>
+      <li>
+        <img src="reconocimiento_facial.jpg" alt="Icono del servicio 1">
+        <h3>Servicio de reconocimiento facial</h3>
+        <p>Funciona mediante la identificación y medición de los rasgos faciales en una imagen. El reconocimiento facial puede identificar rostros humanos en imágenes o videos, determinar si el rostro que aparece en dos imágenes pertenece a la misma persona o buscar un rostro entre una gran colección de imágenes existentes.</p>
+      </li>
+      <li>
+        <img src="asistente_virtual.jpg" alt="Icono del servicio 2">
+        <h3>Asistentes Virtuales</h3>
+        <p>Un asistente virtual es un profesional que ofrece servicios de administración y soporte a otro emprendedor o empresa en remoto. Facilita la gestión de las tareas diarias de un negocio empleando, para ello, apps y herramientas digitales y teniendo la posibilidad de trabajar en remoto.</p>
+      </li>
+      <li>
+        <img src="NPC.png" alt="Icono del servicio 3">
+        <h3>Mejoramiento de la inteligencia de los NPC</h3>
+        <p>La configuración de la IA de cada NPC varía de acuerdo a cada título, género, o fin al que se quiere mostrar en el juego, para esto, dentro de los motores de desarrollo de videojuegos, se implementan herramientas que realicen la implementación de esta característica al NPC</p>
+      </li>
+    </ul>
+  </section>
+
+  <section id="Juegos_destacados">
+    <h2>Juegos destacados</h2>
+    <div class="game-card">
+      <img src="halo.png" alt="Thumbnail del juego 1">
+      <h3>Halo</h3>
+      <p>Halo es una franquicia de videojuegos de ciencia ficción creada y desarrollada por Bungie Studios hasta Halo Reach, y gestionada ahora por 343 Industries. La serie se centra en una guerra interestelar entre la humanidad y una alianza teocrática de alienígenas conocidos como Covenant.</p>
+    </div>
+    <div class="game-card">
+      <img src="warzone.png" alt="Thumbnail del juego 2">
+      <h3>Warzone 2</h3>
+      <p>El modo de juego es una especie de battle royale combinado con Duelo por equipos. El objetivo es el mismo: conseguir la victoria eliminando al resto de jugadores.</p>
+    </div>
+    <div class="game-card">
+      <img src="fall_guys.png" alt="Thumbnail del juego 3">
+      <h3>Fall Guys</h3>
+      <p>Fall Guys es un juego de fiesta royale multiplataforma de multijugador masivo donde tú y tus rivales compiten a lo largo de rondas ascendentes de caóticas y absurdas pistas de obstáculos hasta que solo queda un vencedor afortunado.</p>
+    </div>
+  </section>
+
+  <section id="Testimonios">
+    <h2>Testimonios</h2>
+    <div class="testimonial">
+      <img src="azul.png" alt="Ernesto">
+      <p>Una excelente decisión haber contratado sus servicios</p>
+    </div>
+    <div class="testimonial">
+      <img src="mujer.jpg" alt="Maria">
+      <p>Gran trabajo en el desarrollo de la inteligencia artificial de los NPC</p>
+    </div>
+    <div class="testimonial">
+      <img src="hombre.jpg" alt="Luis">
+      <p>Gran software de desarrollo</p>
+    </div>
+  </section>
+
+  <footer>
+    <div class="Contacto">
+      <h4>Información de contacto</h4>
+      <p>Dirección: 123 Calle Principal, Ciudad Toluca</p>
+      <p>Teléfono: 555-123-4567</p>
+      <p>Email: info@brierksia.com</p>
+    </div>
+    <p>Todos los derechos reservados &copy; 2023 Brierks IA</p>
+  </footer>
+
+  <script src="jsx_React.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
+</body>
+</html>
